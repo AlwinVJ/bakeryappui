@@ -1,4 +1,4 @@
-import 'package:donutapp/utilities/donut_tile.dart';
+import 'package:donutapp/utilities/sales_tile.dart';
 import 'package:flutter/material.dart';
 
 class DonutsTab extends StatelessWidget {
@@ -21,10 +21,10 @@ class DonutsTab extends StatelessWidget {
             crossAxisCount: 2,
             childAspectRatio: 1/1.2),
       itemBuilder: (context, index) {
-        return DonutTiles(
-          donutFlavor: donutsOnSale[index][0],
-          donutPrize: donutsOnSale[index][1],
-          donutColor: donutsOnSale[index][2],
+        return SalesTiles(
+          itemFlavor: donutsOnSale[index][0],
+          itemPrize: donutsOnSale[index][1],
+          itemColor: donutsOnSale[index][2],
           imageName: donutsOnSale[index][3],
         );
       },

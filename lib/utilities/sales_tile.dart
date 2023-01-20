@@ -2,16 +2,16 @@
 
 import 'package:flutter/material.dart';
 
-class DonutTiles extends StatelessWidget {
-  final String donutFlavor;
-  final String donutPrize;
-  final donutColor;
+class SalesTiles extends StatelessWidget {
+  final String itemFlavor;
+  final String itemPrize;
+  final itemColor;
   final String imageName;
-  const DonutTiles(
+  const SalesTiles(
       {super.key,
-      required this.donutFlavor,
-      required this.donutPrize,
-      required this.donutColor,
+      required this.itemFlavor,
+      required this.itemPrize,
+      required this.itemColor,
       required this.imageName});
 
   @override
@@ -20,7 +20,7 @@ class DonutTiles extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Container(
         decoration: BoxDecoration(
-            color: donutColor[50], borderRadius: BorderRadius.circular(12)),
+            color: itemColor[50], borderRadius: BorderRadius.circular(12)),
         child: Column(
           children: [
             Row(
@@ -28,15 +28,15 @@ class DonutTiles extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: donutColor[100],
+                      color: itemColor[100],
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12),
                           topRight: Radius.circular(12))),
                   padding: const EdgeInsets.all(12),
                   child: Text(
-                    '₹$donutPrize',
+                    '₹$itemPrize',
                     style: TextStyle(
-                        color: donutColor[800],
+                        color: itemColor[800],
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
@@ -53,9 +53,9 @@ class DonutTiles extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom:16.0),
               child: Text(
-                donutFlavor,
+                itemFlavor,
                 style: TextStyle(
-                    color: donutColor[600],
+                    color: itemColor[600],
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
